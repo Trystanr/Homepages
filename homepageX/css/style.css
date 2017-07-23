@@ -1,0 +1,141 @@
+
+
+body {
+	margin: 0;
+	padding: 20vh;
+
+	--main-bg-color: rgb(38,34,40);
+	--text-color: #fff;
+	--link-color: rgb(255,206,0);
+	--link-twitch: rgb(0,120,73);
+	--link-bm: rgb(3,117,180);
+
+	background-color: var(--main-bg-color); 
+}
+
+#tab-head {
+	color: rgba(255,255,255,0.6);
+	font-size: 2em;
+}
+
+#hhhCheck::-webkit-scrollbar {
+    width: 10px;  /* remove scrollbar space */
+    background: rgba(255,206,0,0.1);  /* optional: just make scrollbar invisible */
+}
+/* optional: show position indicator in red */
+#hhhCheck::-webkit-scrollbar-thumb {
+    background: var(--link-color);
+}
+
+#twitchCheck::-webkit-scrollbar {
+    width: 10px;  /* remove scrollbar space */
+    background: rgba(0,120,73,0.1);  /* optional: just make scrollbar invisible */
+}
+/* optional: show position indicator in red */
+#twitchCheck::-webkit-scrollbar-thumb {
+    background: var(--link-twitch);
+}
+
+#bmCheck::-webkit-scrollbar {
+    width: 10px;  /* remove scrollbar space */
+    background: rgba(3,117,180,0.1);  /* optional: just make scrollbar invisible */
+}
+
+#bmCheck::-webkit-scrollbar-thumb {
+    background: var(--link-bm);
+}
+
+h1 {
+	color: var(--text-color);
+	padding: 0;
+	margin: 0;
+	float: left;
+	display: inline-block;
+}
+
+#content {
+	width: 100%;
+	height: 100%;
+
+	/*background-color: var(--text-color);*/
+
+}
+
+#music-head {
+	border-bottom: 1px solid  var(--link-color);
+}
+
+#twitch-head {
+	border-bottom: 1px solid  var(--link-twitch);
+}
+
+#bm-head {
+	border-bottom: 1px solid var(--link-bm);
+}
+
+.list-head {
+	float: right;
+	width: 20vw;
+	height: 8%;
+
+	margin-bottom: 10px;
+
+	border-bottom: 1px solid  var(--link-color);
+
+	margin-right: 50px;
+}
+
+.list-item {
+	width: 20vw;
+	float: right;
+	clear: both;
+	height: 90%;
+	margin: 0;
+	padding: 0;
+
+	overflow-y: scroll;
+	overflow-x: hidden;
+
+	margin-right: 50px;
+	/*clear: right;*/
+}
+
+.list-item li {
+	width: 20vw;
+	height: 10%;
+	display: block;
+
+	overflow: hidden;
+}
+
+.list-item a {
+	/*color: var(--link-color);*/
+	text-decoration: none;
+
+	display: block;
+	height: 100%;
+	line-height: 50px;
+
+	vertical-align: middle;
+}
+
+#hhhCheck a {
+	color: var(--link-color);
+}
+
+#twitchCheck a {
+	color: var(--link-twitch);
+}
+
+#bmCheck a {
+	color: var(--link-bm);
+}
+
+.floatright {
+	display: block;
+	float: right;
+}
+
+a:hover {
+	background-color: rgba(0,0,0,0.1);
+}
