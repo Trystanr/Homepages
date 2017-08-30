@@ -1,0 +1,319 @@
+<html>
+
+<head>
+	<title>Start</title>
+	<link rel="shortcut icon" href="img/icn/reindeer.png" type="image/x-icon">
+    <style>
+    body {
+        background-color: #dddddd;
+    }
+    /*
+			ul {
+				height: 40vh;
+				width: 60vw;
+				margin: 0;
+				margin-left: 20vw;
+				background-color: #7A709C;
+				padding: 0;
+			}
+
+			li {
+				margin: 0;
+				padding: 0;
+				width: 10vw;
+				height: 40vh;
+				display: block;
+				float: left;
+
+				background-color: #7A709C;
+				transition:all 500ms ease;
+			}
+
+			ul:hover li { width: 4vw; }
+			ul:hover li:hover { 
+				width: 40vw; 
+				background-color: #5C437A;
+
+				transition:width 500ms, background-color 500ms ease-in;
+			}*/
+    
+    @font-face {
+        font-family: BasicTitle;
+        src: url(font/basictitlefont.ttf);
+    }
+    
+    @font-face {
+        font-family: Champ;
+        src: url(font/champ.ttf);
+    }
+    
+    @font-face {
+        font-family: Josefin;
+        src: url(font/JosefinSans.ttf);
+    }
+    
+    .accordion {
+        width: 100%;
+        max-width: 800px;
+        height: 150px;
+        overflow: visible;
+        margin: 50px auto;
+    }
+    
+    .accordion ul {
+        width: 100%;
+        display: table;
+        table-layout: fixed;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .accordion ul li {
+        display: table-cell;
+        vertical-align: bottom;
+        position: relative;
+        width: 16.666%;
+        height: 150px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        transition: all 500ms ease;
+        background-color: transparent;
+        background-size: 5vw !important;
+        /*outline: 10px solid #dddddd;*/
+    }
+    
+    .accordion ul li div {
+        display: block;
+        overflow: hidden;
+        width: 100%;
+    }
+    
+    .accordion ul li div a {
+        display: block;
+        height: 150px;
+        width: 100%;
+        position: relative;
+        z-index: 3;
+        vertical-align: bottom;
+        padding: 15px 20px;
+        box-sizing: border-box;
+        color: #fff;
+        text-decoration: none;
+        font-family: Open Sans, sans-serif;
+        transition: all 200ms ease;
+    }
+    
+    .accordion ul li div a * {
+        opacity: 0;
+        margin: 0;
+        width: 100%;
+        text-overflow: ellipsis;
+        position: relative;
+        z-index: 5;
+        white-space: nowrap;
+        overflow: hidden;
+        -webkit-transform: translateX(-20px);
+        transform: translateX(-20px);
+        -webkit-transition: all 400ms ease;
+        transition: all 400ms ease;
+    }
+    
+    .accordion ul li div a h2 {
+        font-family: Montserrat, sans-serif;
+        text-overflow: clip;
+        font-size: 24px;
+        text-transform: uppercase;
+        margin-bottom: 0px;
+        top: 95px;
+    }
+    
+    .accordion ul li div a p {
+        top: 160px;
+        font-size: 13.5px;
+    }
+    
+    .accordion ul:hover li {
+        width: 8%;
+        background-size: 3vw !important;
+    }
+    
+    .accordion ul:hover li:hover {
+        width: 60%;
+        background-size: 8vw !important;
+    }
+    
+    .accordion ul:hover li:hover a {
+        background: rgba(0, 0, 0, 0.4);
+    }
+    
+    .accordion ul:hover li:hover a * {
+        opacity: 1;
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+    
+    #email {
+        background: #1d6fb5 url("img/icn/Outlook-icon.png") center center no-repeat;
+        /*background-size: 8vw;*/
+    }
+    
+    #gmail {
+        /*background-color: #e94132;*/
+        background: #ffffff url("img/icn/Gmail-icon.png") center center no-repeat;
+        /*background-size: 8vw;*/
+    }
+    
+    #netflix {
+        background: #000 url("img/icn/Netflix-icon.png") center center no-repeat;
+        /*background-size: 9vw;*/
+    }
+    
+    #reddit {
+        /*background-color: #ff4500;*/
+        background: #ff4500 url("img/icn/Reddit-icon.png") center center no-repeat;
+        /*background-size: 9vw;*/
+    }
+    
+    #youtube {
+        background-color: #cd201f;
+        background: #cd201f url("img/icn/Youtube-icon.png") center center no-repeat;
+        /*background-size: 9vw;*/
+    }
+    
+    #soundcloud {
+        background-color: #ff8800;
+        background: #ff5510 url("img/icn/Soundcloud-icon.png") center center no-repeat;
+        /*background-size: 9vw;*/
+    }
+    
+    #header {
+        width: 60vw;
+        margin-left: 20vw;
+        margin-top: 20vh;
+        height: 20vh;
+    }
+    
+    #header h1 {
+        width: 100%;
+        text-align: center;
+        font-size: 20vh;
+        font-family: BasicTitle;
+        margin-bottom: 0;
+        margin-top: 0;
+    }
+    
+    #header h2 {
+        width: 100%;
+        text-align: center;
+        font-size: 5vh;
+        margin-top: -4vh;
+        font-family: Josefin;
+    }
+    </style>
+    <script type="text/javascript" src="js/vendor/jquery.js"></script>
+</head>
+
+<body>
+    <!-- <ul>
+			<li >hotmail</li>
+			<li id="gmail">gmail</li>
+			<li id="soundcloud">youtube</li>
+			<li id="reddit">reddit</li>
+			<li id="youtube">youtube</li>
+			<li id="netflix">netflix</li>
+		</ul> -->
+    <div id="header">
+        <h1 id="timedude">00:00</h1>
+        <h2 id="datedude">wed 13 oct</h2>
+    </div>
+    <div class="accordion">
+        <ul>
+            <li id="email">
+                <div>
+                    <a href="https://dub112.mail.live.com/default.aspx?id=64855">
+                        <h2>Outlook</h2>
+                    </a>
+                </div>
+            </li>
+            <li id="gmail">
+                <div>
+                    <a href="https://mail.google.com/mail/u/0/#inbox">
+                        <h2>Gmail</h2>
+                    </a>
+                </div>
+            </li>
+            <li id="netflix">
+                <div>
+                    <a href="http://www.netflix.com/browse">
+                        <h2>Netflix</h2>
+                    </a>
+                </div>
+            </li>
+            <li id="reddit">
+                <div>
+                    <a href="http://www.reddit.com/">
+                        <h2>Reddit</h2>
+                    </a>
+                </div>
+            </li>
+            <li id="youtube">
+                <div>
+                    <a href="https://www.youtube.com/">
+                        <h2>Youtube</h2>
+                    </a>
+                </div>
+            </li>
+            <li id="soundcloud">
+                <div>
+                    <a href="https://soundcloud.com/">
+                        <h2>Soundcloud</h2>
+                    </a>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <script type="text/javascript">
+    $.getJSON("ajax/test.json", function(data) {
+        var items = [];
+        $.each(data, function(key, val) {
+            items.push("<li id='" + key + "'>" + val + "</li>");
+        });
+
+        $("<ul/>", {
+            "class": "my-new-list",
+            html: items.join("")
+        }).appendTo("body");
+    });
+    </script>
+    <script type="text/javascript">
+    function GetClock() {
+        var d = new Date();
+        var nhour = d.getHours(),
+            nmin = d.getMinutes();
+        if (nmin <= 9) nmin = "0" + nmin
+
+        document.getElementById('timedude').innerHTML = "" + nhour + ":" + nmin + "";
+    }
+    </script>
+    <script type="text/javascript">
+    var tday = new Array("sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday");
+    var tmonth = new Array("jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sep", "oct", "nov", "dec");
+
+    function GetClocka() {
+        var a = new Date();
+        var nday = a.getDay(),
+            nmonth = a.getMonth(),
+            ndate = a.getDate();
+
+        document.getElementById('datedude').innerHTML = "" + tday[nday] + ", " + tmonth[nmonth] + " " + ndate + "";
+    }
+
+    window.onload = function() {
+        GetClocka();
+        GetClock();
+        setInterval(GetClock, 1000);
+    }
+    </script>
+</body>
+
+</html>
